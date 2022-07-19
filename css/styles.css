@@ -21,6 +21,10 @@ body {
   color: white;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 #home::before {
   content: "";
   position: fixed;
@@ -91,6 +95,20 @@ a:hover {
   transform: rotate(360deg) scale(2);
 }
 
+.scl-heart {
+  animation-name: heart;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+}
+@keyframes heart{
+  from{
+    font-size: 1rem;
+  }
+  to{
+    font-size: 1.3rem;
+  }
+}
+
 .rot {
   transition: 1s;
 }
@@ -145,6 +163,10 @@ a:hover {
     animation-name: left;
     animation-duration: 1s;
     animation-iteration-count: 1;
+  }
+  
+  .left>div {
+    padding-left: 1rem;
   }
 
   .navbar .right {
