@@ -1,0 +1,313 @@
+@import url('https://fonts.googleapis.com/css2?family=Edu+SA+Beginner&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Tapestry&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+
+/* 
+Navigation
+font-family: 'Edu SA Beginner', cursive;
+Special
+font-family: 'Fredericka the Great', cursive;
+Heading
+font-family: 'Tapestry', cursive;
+Content
+font-family: 'Indie Flower', cursive;
+*/
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: black;
+  color: white;
+}
+
+#home::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  opacity: 0.5;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.fixed-top {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+}
+
+.collapse:not(.show) {
+  display: none;
+}
+
+@media (min-width: 600px) {
+  .navbar-collapse {
+    display: flex !important;
+    flex-basis: auto;
+  }
+
+  .navbar-toggler {
+    display: none;
+  }
+}
+
+p {
+  font-family: 'Indie Flower', cursive;
+}
+
+h1 {
+  font-family: 'Tapestry', cursive;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+  font-family: 'Edu SA Beginner', cursive;
+  font-weight: bolder;
+  padding: 0rem 0.5rem;
+}
+
+a:hover {
+  color: yellow;
+}
+
+.rot-scl {
+  transition: all 0.5s;
+}
+
+.rot-scl:hover {
+  transform: rotate(360deg) scale(2);
+}
+
+.rot {
+  transition: 1s;
+}
+
+.rot:hover {
+  transform: rotate(360deg);
+}
+
+.but {
+  position: absolute;
+  right: 1.5rem;
+  top: 1.5rem;
+  height: 2rem;
+  width: 2rem;
+  font-size: 1rem;
+  border-radius: 0.3rem;
+  animation-name: menu;
+  animation-duration: 1s;
+  animation-iteration-count: 1;
+}
+
+@keyframes menu {
+  from {
+    right: 100vw;
+  }
+
+  to {
+    right: 1.5rem;
+  }
+}
+
+/* LARGE */
+@media (min-width: 600px) {
+  section {
+    height: 100vh;
+    width: 75vw;
+  }
+
+  section::before {
+    background: url('../img/gg_bg_b.jpg') no-repeat center center/cover;
+  }
+
+  .navbar {
+    font-size: 1.5rem;
+    margin: 1rem 1rem;
+  }
+
+  .navbar .left {
+    display: flex;
+    position: relative;
+    right: -1rem;
+    animation-name: left;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+  }
+
+  .navbar .right {
+    position: absolute;
+    right: 2rem;
+    animation-name: right;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+  }
+
+  .scl1_5:hover {
+    transform: scale(1.5);
+  }
+
+  .scl1_2:hover {
+    transform: scale(1.2);
+  }
+
+  .scl1_2,
+  .scl1_5 {
+    transition: all 0.2s;
+  }
+
+  #home {
+    font-size: 8rem;
+    font-weight: lighter;
+    font-family: 'Fredericka the Great', cursive;
+    text-shadow: 0.5rem 0.5rem black;
+    animation-name: home;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+  }
+
+  #about {
+    font-size: 3rem;
+    font-weight: bolder;
+  }
+
+  #about p {
+    font-size: 2rem;
+  }
+
+  #gallery {
+    font-size: 3rem;
+    font-weight: bolder;
+  }
+
+  @keyframes home {
+    from {
+      font-size: 0rem;
+    }
+
+    to {
+      font-size: 8rem;
+    }
+  }
+
+  @keyframes left {
+    from {
+      right: -100vw;
+      top: 100vh;
+    }
+
+    to {
+      right: -1rem;
+      top: 0rem;
+    }
+  }
+
+  @keyframes right {
+    from {
+      right: 95vw;
+      top: 100vh;
+    }
+
+    to {
+      right: 2rem;
+      top: 1rem;
+    }
+  }
+
+  footer {
+    height: 3rem;
+    font-size: 1.25rem;
+  }
+}
+
+/* SMALL */
+@media (max-width: 600px) {
+  section {
+    height: 100vh;
+    width: 90vw;
+  }
+
+  section::before {
+    background: url('../img/gg_bg_s.jpg') no-repeat center center/cover;
+  }
+
+  .line {
+    display: none;
+  }
+
+  .navbar {
+    font-size: 1rem;
+    margin: 3rem 1rem;
+  }
+
+  .navbar .left {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .left>div {
+    padding-top: 0.2rem;
+  }
+
+  .navbar .right {
+    position: absolute;
+    top: 1.5rem;
+    display: flex;
+  }
+
+  #home {
+    font-size: 2.5rem;
+    font-family: 'Fredericka the Great', cursive;
+    text-shadow: 0.3rem 0.3rem black;
+    animation-name: home;
+    animation-duration: 0.5s;
+    animation-iteration-count: 1;
+  }
+
+  #gallery {
+    font-size: 1.5rem;
+  }
+
+  #about {
+    font-size: 1.5rem;
+  }
+
+  #about p {
+    font-size: 1rem;
+    font-weight: bold;
+  }
+
+  @keyframes home {
+    from {
+      font-size: 0rem;
+    }
+
+    to {
+      font-size: 2.5rem;
+    }
+  }
+
+  footer {
+    height: 2rem;
+    font-size: 0.75rem;
+  }
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
