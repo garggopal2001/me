@@ -112,13 +112,13 @@ a:hover {
   }
 }
 
-.rot {
+/* .rot {
   transition: 1s;
 }
 
 .rot:hover {
   transform: rotate(360deg);
-}
+} */
 
 .but {
   position: absolute;
